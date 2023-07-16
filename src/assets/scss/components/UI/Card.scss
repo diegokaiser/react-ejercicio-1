@@ -1,0 +1,84 @@
+.card {
+  background-color: rgba(0, 0, 0, 0);
+  box-sizing: border-box;
+  cursor: pointer;
+  display: flex;
+  font-family: $OpenSans;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 12px 14px;
+  width: 348px;
+  transition: .35s ease;
+  &__userdata {
+    align-items: center;
+    display: flex;
+    img {
+      border-radius: 40px;
+      height: 40px;
+      margin-right: 12px;
+      width: 40px;
+    }
+  }
+  &__username {
+    display: flex;
+    flex-direction: column;
+    strong {
+      color: rgb(231, 233, 234);
+      font-size: 15px;
+    }
+    &-data {
+      span {
+        color: rgb(113, 118, 123);
+        font-size: 15px;
+        &:first-child {
+          white-space: nowrap;
+        }
+        &:nth-child(2) {
+          background-color: rgb(32, 35, 39);
+          border-radius: 4px;
+          color: rgb(113, 118, 123);
+          font-size: 11px;
+          margin-left: 4px;
+          padding: 2px 4px;
+        }
+      }
+    }
+  }
+  &__actions {
+    align-items: center;
+    display: flex;
+    button {
+      background-color: rgb(239, 243, 244);
+      border: 0;
+      border-radius: 78px;
+      box-sizing: border-box;
+      cursor: pointer;
+      height: 32px;
+      font-weight: bold;
+      margin: 0;
+      padding: 0 14px;
+      transition: .35s ease;
+      &.isFollowing {
+        background-color: rgba(0, 0, 0, 0);
+        border: 1px solid;
+        border-color: rgb(83, 100, 113);
+        color: rgb(239, 243, 244);
+        &:hover {
+          border-color: rgb(103, 7, 15);
+          color: #F4212E;
+        }
+      }
+    }
+  }
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.03);
+    .card__actions {
+      button {
+        background-color: rgb(215, 219, 220);
+        &.isFollowing {
+          background-color: rgba(244, 33, 46, 0.1);
+        }
+      }
+    }
+  }
+}
